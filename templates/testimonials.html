@@ -74,12 +74,16 @@
   </head>
 
   <body>
-    <!-- Navbar -->
+    <!-- ✅ Navbar -->
     <nav class="navbar">
       <div class="logo">
         <img src="/images/logo_P_only-removebg-preview.png" alt="Piyush Logo" />
       </div>
-      <ul>
+
+      <!-- Hamburger Icon -->
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/services">Services</a></li>
@@ -274,5 +278,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-  </body>
+
+    
+    <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
+
+</body>
 </html>

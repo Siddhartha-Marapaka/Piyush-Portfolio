@@ -77,25 +77,30 @@
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">
-        <img src="/images/logo_P_only-removebg-preview.png" alt="Piyush Logo" />
-      </div>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/business">Business</a></li>
-        <li><a href="/achievements">Achievements</a></li>
-        <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="/clients">Clients</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/certifications">Certifications</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
+   <!-- ✅ Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="/images/logo_P_only-removebg-preview.png" alt="Piyush Logo" />
+  </div>
+
+  <!-- Hamburger Icon -->
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/business">Business</a></li>
+    <li><a href="/achievements">Achievements</a></li>
+    <li><a href="/testimonials">Testimonials</a></li>
+    <li><a href="/clients">Clients</a></li>
+    <li><a href="/skills">Skills</a></li>
+    <li><a href="/certifications">Certifications</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
 
     <main>
       <!-- Hero Section -->
@@ -157,6 +162,9 @@
     </div>
 
     <script src="/script.js"></script>
+
+    
+
 
     <footer class="footer">
       <div class="footer-row">
@@ -287,5 +295,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    
+    <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+</script>
   </body>
 </html>

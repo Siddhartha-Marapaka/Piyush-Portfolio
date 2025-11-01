@@ -1054,8 +1054,8 @@ body {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 250px;
-  height: 350px;
+  width: 240px;
+  height: 340px;
   background: rgba(17, 24, 39, 0.95);
   border: 2px solid #6366f1;
   border-radius: 14px;
@@ -1115,7 +1115,7 @@ body {
   background: #6366f1;
   border: none;
   color: white;
-  padding: 10px 15px;
+  padding: 0px 0px;
   cursor: pointer;
   transition: background 0.18s ease;
   font-weight: 600;
@@ -1137,6 +1137,14 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Hide Chatbot on Mobile Devices */
+@media (max-width: 768px) {
+  .chatbox {
+    display: none !important;
+  }
+}
+
 
 /* ================= Final Responsive Adjustments ================= */
 @media (max-width: 768px) {
@@ -1548,31 +1556,94 @@ body {
 }
 
 
-
-/* Chatbot Responsive Fix */
-.chatbox {
-  position: fixed;
+/* ================= Smaller Chatbot Widget ================= */
+#chatbot {
+  width: 260px;   /* reduce width */
+  height: 360px;  /* reduce height */
+  font-size: 0.9rem; /* smaller text */
+  border-radius: 12px;
   bottom: 20px;
   right: 20px;
-  width: 350px;
-  height: 450px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  overflow: hidden;
-  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-/* 📱 For Mobile */
-@media (max-width: 768px) {
-  .chatbox {
-    width: 90%;
-    height: 60%;
-    right: 5%;
-    bottom: 10px;
+#chatbot iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+
+
+/* ✅ Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+/* ✅ Navbar Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0078ff;
+}
+
+/* ✅ Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ✅ Responsive for Mobile */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
   }
 
-  .chat-input input {
-    font-size: 14px;
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    flex-direction: column;
+    background: #fff;
+    width: 240px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    color: #333;
   }
 }
