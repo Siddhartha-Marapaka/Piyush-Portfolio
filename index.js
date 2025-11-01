@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use("/images", express.static(path.join(__dirname, "public", "images")));
+app.use("/scripts", express.static(path.join(__dirname, "public", "scripts")));
+app.use("/styles", express.static(path.join(__dirname, "public", "styles")));
+
 
 // Routes
 app.get("/", (req, res) => {
@@ -109,6 +113,11 @@ When users ask about Piyush Sir, his academy, or his expertise, always respond p
 });
 
 app.get("/index", (req, res) => res.redirect("/"));
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "templates", "index.html"));
+});
+
 
 app.listen(PORT, () =>
   console.log(`✅ Server running on http://localhost:${PORT}`)

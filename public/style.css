@@ -1546,3 +1546,33 @@ body {
     height: 280px;
   }
 }
+
+
+
+/* Chatbot Responsive Fix */
+.chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 450px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* 📱 For Mobile */
+@media (max-width: 768px) {
+  .chatbox {
+    width: 90%;
+    height: 60%;
+    right: 5%;
+    bottom: 10px;
+  }
+
+  .chat-input input {
+    font-size: 14px;
+  }
+}
