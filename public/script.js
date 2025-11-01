@@ -39,3 +39,12 @@ async function sendMessage() {
     typing.textContent = "⚠️ Error connecting to server";
   }
 }
+
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
