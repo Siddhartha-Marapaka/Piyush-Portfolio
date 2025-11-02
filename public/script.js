@@ -42,12 +42,34 @@ async function sendMessage() {
 
 
 
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+  const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.navbar ul');
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show"); // ✅ should toggle 'active', not 'show'
-  });
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".navbar ul");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Optional: Close menu when a link is clicked
+    const allLinks = document.querySelectorAll(".navbar ul li a");
+    allLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
+});
+
+
 
 
 
