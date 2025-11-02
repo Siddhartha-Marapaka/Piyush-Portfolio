@@ -1,4 +1,4 @@
-/* ================= Global Reset ================= */
+/* ========== Global Reset ======== */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ================= Navbar ================= */
+/* ========= Navbar ========= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -135,8 +135,7 @@ body {
   color: #000;
 }
 
-
-/* ================= Hero Section ================= */
+/* =========== Hero Section ========== */
 .hero {
   display: flex;
   justify-content: center;
@@ -144,6 +143,7 @@ body {
   min-height: 90vh;
   padding: 0 10%;
 }
+
 .hero-content {
   display: flex;
   justify-content: space-between;
@@ -153,9 +153,12 @@ body {
   max-width: 1200px;
   width: 92%;
 }
+
 .hero-text {
   flex: 1 1 45%;
-} /* main name*/
+}
+
+/* main name*/
 .hero-text h1 {
   font-family: "Playfair Display", serif;
   font-size: 2.6rem;
@@ -163,7 +166,9 @@ body {
   margin-bottom: 35px;
   line-height: 1.05;
   text-align: center;
-} /* intro under title */
+}
+
+/* intro under title */
 .hero-text p {
   font-family: "Nunito", sans-serif;
   color: #111827;
@@ -173,14 +178,18 @@ body {
   max-width: 760px;
   opacity: 0.98;
   text-align: center;
-} /* ✅ Button Container */
+}
+
+/* ✅ Button Container */
 .book-call-container {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
   margin-top: 24px;
   justify-content: center;
-} /* ✅ Unified Button Style */
+}
+
+/* ✅ Unified Button Style */
 .btn,
 .book-call-btn {
   display: inline-flex;
@@ -196,15 +205,17 @@ body {
   font-size: 1rem;
   transition: all 0.25s ease;
   box-shadow: 0 3px 8px rgba(59, 130, 246, 0.2);
-} /* ✅ Hover effect - smooth lift */
+}
+
+/* ✅ Hover effect - smooth lift */
 .btn:hover,
 .book-call-btn:hover {
   background: #2563eb;
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
-} /* ✅ On small screens, buttons stack */
+}
 
-
+/* ✅ On small screens, buttons stack */
 @media (max-width: 700px) {
   .book-call-container {
     flex-direction: column;
@@ -218,6 +229,7 @@ body {
     padding: 9px 18px;
   }
 }
+
 .hero-image {
   flex: 10 1 35%;
   display: flex;
@@ -244,7 +256,9 @@ body {
 .photo-placeholder:hover {
   transform: scale(1.04);
   box-shadow: 0 0 28px rgba(99, 102, 241, 0.5);
-} /* ================= Home Intro Section ================= */
+}
+
+/* ========== Home Intro Section ========== */
 .intro {
   text-align: center;
   padding: 80px 10%;
@@ -267,7 +281,7 @@ body {
   line-height: 1.9;
 }
 
-/* ================= Home Intro Section ================= */
+/* =========== Home Intro Section ========== */
 .intro {
   text-align: center;
   padding: 80px 10%;
@@ -292,7 +306,7 @@ body {
   line-height: 1.9;
 }
 
-/* ================= ABOUT PAGE STYLING ================= */
+/* =========== ABOUT PAGE STYLING =========== */
 .about {
   min-height: 100vh;
   display: flex;
@@ -354,7 +368,7 @@ body {
   box-shadow: 0 0 35px rgba(99, 102, 241, 0.6);
 }
 
-/* ================= CORE EXPERTISE / SKILLS GRID ================= */
+/* =========== CORE EXPERTISE / SKILLS GRID =========== */
 .skills {
   text-align: center;
   padding: 80px 0;
@@ -373,14 +387,13 @@ body {
   flex-direction: column;
   align-items: center;
   background: #ffffff;
-  /* padding: 40px; */
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   width: fit-content;
   margin: 0 auto;
   gap: 12px;
-  list-style: none; /* removes bullet points */
-  padding-left: 0; /* removes default left padding of ul */
+  list-style: none;
+  padding-left: 0;
 }
 
 .expertise-list li {
@@ -413,7 +426,7 @@ body {
   }
 }
 
-/* ================= Career Summary & Highlights ================= */
+/* ========== Career Summary & Highlights ========== */
 .career-summary {
   padding: 80px 10%;
   background: #f5f7fa;
@@ -474,7 +487,7 @@ body {
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.32);
 }
 
-/* ================= Services Section ================= */
+/* ========== Services Section ========= */
 .services {
   padding: 80px 10%;
   text-align: center;
@@ -538,7 +551,7 @@ body {
   box-shadow: 0 0 25px rgba(99, 102, 241, 0.35);
 }
 
-/* ================= Business Portfolio ================= */
+/* ============ Business Portfolio ============ */
 .business-section {
   padding: 80px 10%;
   background: #f5f7fa;
@@ -592,7 +605,7 @@ body {
   border-color: rgba(37, 99, 235, 0.3);
 }
 
-/* ================= Achievements ================= */
+/* ============= Achievements ============= */
 .achievements {
   background: #f5f7fa;
   color: #111827;
@@ -748,7 +761,7 @@ body {
   margin: 0;
 }
 
-/* ================= Clients Section ================= */
+/* ============= Clients Section =============== */
 .clients {
   padding: 80px 10%;
   text-align: center;
@@ -810,7 +823,7 @@ body {
   filter: brightness(1.12);
 }
 
-/* ================= Skills Page (two-column content replacement) ================= */
+/* ============ Skills Page ========== */
 .skills-container {
   max-width: 1100px;
   margin: auto;
@@ -878,7 +891,7 @@ body {
   background: #ffffff;
 }
 
-/* ================= Certifications Page ================= */
+/* ========== Certifications Page ========== */
 .certifications-page {
   padding: 80px 10%;
   text-align: center;
@@ -947,7 +960,7 @@ body {
   box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
 }
 
-/* ================= Contact Section ================= */
+/* =========== Contact Section =========== */
 .contact {
   min-height: 100vh;
   display: flex;
@@ -1013,7 +1026,7 @@ body {
   transform: scale(1.2);
 }
 
-/* ================= Form ================= */
+/* ========== Form ========== */
 .contact-form {
   flex: 1 1 50%;
   background: rgba(255, 255, 255, 0.06);
@@ -1065,7 +1078,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ================= Chat Widget (single polished definition) ================= */
+/* =========== Chat Widget =========== */
 .chatbox {
   position: fixed;
   bottom: 25px;
@@ -1161,7 +1174,7 @@ body {
   }
 }
 
-/* ================= Final Responsive Adjustments ================= */
+/* ======== Final Responsive Adjustments ======= */
 @media (max-width: 768px) {
   .about-container,
   .hero-content,
@@ -1390,7 +1403,7 @@ body {
   border-radius: 10px;
 }
 
-/* ================= BLOG PAGE ================= */
+/* ========== BLOG PAGE ========== */
 .blog {
   padding: 80px 10%;
   text-align: center;
@@ -1454,7 +1467,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* ================= FOOTER ICON SIZE FIX ================= */
+/* ======= FOOTER ICON SIZE FIX ======== */
 .social-links img.social-icon {
   width: 28px;
   height: 28px;
@@ -1569,11 +1582,11 @@ body {
   }
 }
 
-/* ================= Smaller Chatbot Widget ================= */
+/* ========== Smaller Chatbot Widget ========== */
 #chatbot {
-  width: 260px; /* reduce width */
-  height: 360px; /* reduce height */
-  font-size: 0.9rem; /* smaller text */
+  width: 260px;
+  height: 360px;
+  font-size: 0.9rem;
   border-radius: 12px;
   bottom: 20px;
   right: 20px;

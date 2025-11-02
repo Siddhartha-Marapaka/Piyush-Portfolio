@@ -3,10 +3,10 @@ const path = require("path");
 const axios = require("axios");
 require("dotenv").config();
 
-console.log("✅ Groq Key Loaded:", process.env.GROQ_API_KEY ? "Yes" : "No");
+console.log(" Groq Key Loaded:", process.env.GROQ_API_KEY ? "Yes" : "No");
 
 const app = express();
-const PORT = process.env.PORT || 3000; 
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,7 +14,6 @@ app.use(express.static("public"));
 app.use("/images", express.static(path.join(__dirname, "public", "images")));
 app.use("/scripts", express.static(path.join(__dirname, "public", "scripts")));
 app.use("/styles", express.static(path.join(__dirname, "public", "styles")));
-
 
 // Routes
 app.get("/", (req, res) => {
@@ -118,7 +117,6 @@ app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, "templates", "index.html"));
 });
 
-
 app.listen(PORT, () =>
-  console.log(`✅ Server running on http://localhost:${PORT}`)
+  console.log(` Server running on http://localhost:${PORT}`)
 );

@@ -32,23 +32,19 @@ async function sendMessage() {
     botDiv.className = "msg bot";
     botDiv.textContent = data.reply || "No reply from AI.";
     messagesDiv.appendChild(botDiv);
-
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
   } catch (err) {
     console.error(err);
-    typing.textContent = "⚠️ Error connecting to server";
+    typing.textContent = "Error connecting to server";
   }
 }
 
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".navbar ul");
 
-
-  const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.navbar ul');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".menu-toggle");
@@ -59,17 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.toggle("active");
     });
 
-    // Optional: Close menu when a link is clicked
     const allLinks = document.querySelectorAll(".navbar ul li a");
-    allLinks.forEach(link => {
+    allLinks.forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
       });
     });
   }
 });
-
-
-
-
-
